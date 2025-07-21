@@ -1,6 +1,6 @@
 import fs from "fs/promises";
 import { Mongofy } from "../mongofy";
-const csvParse = require("csv-parse/lib/sync");
+const csvParse = require("csv-parse/sync");
 
 export async function importFromCsv(options: {
   file: string;

@@ -22,5 +22,6 @@ export async function runSeed(args: string[], mongofy: Mongofy) {
     await seed.default(mongofy);
   }
   await mongofy.disconnect();
-  console.log("[Mongofy] Seed complete.");
+  console.log('[Mongofy] Seed complete.');
+  process.exit(0);
 }

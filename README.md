@@ -16,15 +16,54 @@
 You can use the CLI directly with ts-node:
 
 ```sh
-mongofy migrate --url mongodb://127.0.0.1/test
-mongofy seed --url mongodb://127.0.0.1/test
-mongofy import --from json --file data.json --collection users --url mongodb://127.0.0.1/test
-mongofy db:status --url mongodb://127.0.0.1/test
-mongofy db:drop --url mongodb://127.0.0.1/test
-mongofy doc --url mongodb://127.0.0.1/test
+npx ts-node mongofy migrate --url mongodb://127.0.0.1/test
+npx ts-node mongofy migrate down --url mongodb://127.0.0.1/test
+npx ts-node mongofy seed --url mongodb://127.0.0.1/test
+npx ts-node mongofy import --from json --file data.json --collection users --url mongodb://127.0.0.1/test
+npx ts-node mongofy db:status --url mongodb://127.0.0.1/test
+npx ts-node mongofy db:drop --url mongodb://127.0.0.1/test
+npx ts-node mongofy doc --url mongodb://127.0.0.1/test
 ```
 
 All CLI commands require the `--url` argument to specify the MongoDB connection string.
+
+---
+
+## CLI Troubleshooting
+
+If you see this error:
+
+```
+'mongofy' is not recognized as an internal or external command,
+operable program or batch file.
+```
+
+It means the CLI is not installed globally or not in your PATH.
+
+### Solutions
+
+- **If you installed mongofy locally (as a devDependency):**
+  Use `npx` to run the CLI:
+  ```sh
+  npx mongofy migrate --url mongodb://127.0.0.1/test
+  ```
+- **If you want to use the CLI globally:**
+  Install mongofy globally:
+  ```sh
+  npm install -g mongofy
+  mongofy migrate --url mongodb://127.0.0.1/test
+  ```
+- **If you are developing or using TypeScript sources directly:**
+  Use ts-node:
+  ```sh
+  npx ts-node mongofy migrate --url mongodb://127.0.0.1/test
+  ```
+
+If you still get the error, make sure your global npm bin directory is in your PATH. You can find it with:
+
+```sh
+npm bin -g
+```
 
 ---
 

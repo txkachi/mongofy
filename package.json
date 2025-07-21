@@ -1,6 +1,6 @@
 {
   "name": "mongofy",
-  "version": "0.9.3-alpha",
+  "version": "0.9.5-alpha",
   "description": "a modern, feature-rich, and type-safe MongoDB client module for Node.js.",
   "main": "dist/index.js",
   "repository": {

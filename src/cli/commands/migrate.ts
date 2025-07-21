@@ -54,5 +54,6 @@ export async function runMigrate(args: string[], mongofy: Mongofy) {
     }
   }
   await mongofy.disconnect();
-  console.log("[Mongofy] Migration complete.");
+  console.log('[Mongofy] Migration complete.');
+  process.exit(0);
 }

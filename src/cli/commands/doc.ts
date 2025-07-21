@@ -16,4 +16,5 @@ export async function runDoc(args: string[]) {
   }
   fs.writeFileSync("openapi.schemas.json", JSON.stringify(schemas, null, 2));
   console.log("[Mongofy] OpenAPI schemas generated: openapi.schemas.json");
+  process.exit(0);
 }

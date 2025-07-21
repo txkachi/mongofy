@@ -20,5 +20,6 @@ export async function runImport(args: string[], mongofy: Mongofy) {
   await mongofy.connect();
   await universalImport(options);
   await mongofy.disconnect();
-  console.log("[Mongofy] Import complete.");
+  console.log('[Mongofy] Import complete.');
+  process.exit(0);
 }
