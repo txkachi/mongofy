@@ -1,0 +1,30 @@
+{
+  "name": "mongofy",
+  "version": "0.9.3-alpha",
+  "description": "a modern, feature-rich, and type-safe MongoDB client module for Node.js.",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/txkachi/mongofy.git"
+  },
+  "keywords": [
+    "MongoDB",
+    "Mongofy",
+    "Database"
+  ],
+  "author": "Takachi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/txkachi/mongofy/issues"
+  },
+  "bin": {
+    "mongofy": "dist/cli/index.js"
+  },
+  "homepage": "https://github.com/txkachi/mongofy#readme",
+  "dependencies": {
+    "@types/node": "^24.0.15",
+    "csv-parse": "^6.1.0",
+    "mongodb": "^6.17.0",
+    "node-fetch": "^3.3.2"
+  }
+}
